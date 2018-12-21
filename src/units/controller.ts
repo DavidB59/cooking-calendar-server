@@ -1,4 +1,4 @@
-import { JsonController, Get, Param } from 'routing-controllers'
+import { JsonController, Get, Param, Post, Body, HttpCode } from 'routing-controllers'
 import Unit from './entity';
 
 @JsonController()
@@ -16,5 +16,13 @@ export default class UnitController {
   @Get('/units')
   getAllUnits() {
     return Unit.find()
+  }
+
+  @Post('/units')
+  @HttpCode(201)
+  async createIngredient(
+    @Body() unit : Unit)
+  {
+    return unit.save()
   }
 }
