@@ -1,4 +1,4 @@
-# cooking-calendar-server
+# Cooking-calendar-server
 
 Full stack team project using TypeScript, TypeORM and a PostgreSQL database for back end.
 
